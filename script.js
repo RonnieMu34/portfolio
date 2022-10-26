@@ -43,3 +43,14 @@ const init = () => {
 }
 
 init();
+
+const animate = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < ParticlesArray.length; i++) {
+        ParticlesArray[i].update();
+        ParticlesArray[i].draw();
+    }
+    requestAnimationFrame(animate);
+}
+
+animate();
