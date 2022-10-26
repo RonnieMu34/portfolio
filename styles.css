@@ -27,7 +27,7 @@ html {
 }
 
 .line1, .line2 {
-    animation: fade-in 5s;
+    animation: fade-in 3s;
 }
 
 .name {
