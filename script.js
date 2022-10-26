@@ -23,7 +23,7 @@ class Particle {
             this.directionX = -this.directionX;
         }
 
-        if (this.y - this.size < - 0 || this.y + this.size > canvas.height) {
+        if (this.y - this.size < 0 || this.y + this.size > canvas.height) {
             this.directionY = -this.directionY;
         }
     }
@@ -54,3 +54,8 @@ const animate = () => {
 }
 
 animate();
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}); 
