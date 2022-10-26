@@ -27,4 +27,10 @@ class Particle {
             this.directionY = -this.directionY;
         }
     }
+    draw() {
+        ctx.beginPath();
+        ctx.fillStyle = "#fff";
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
 }
