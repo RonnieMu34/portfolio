@@ -26,6 +26,11 @@ html {
     font-size: 36px;
 }
 
+#canvas {
+    width: 100%;
+    height: 100%;
+}
+
 .line1, .line2 {
     animation: fade-in 3s;
 }
