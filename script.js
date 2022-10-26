@@ -14,4 +14,17 @@ class Particle {
         this.directionX = Math.random() * 5 - 2.5;
         this.directionY = Math.random() * 5 - 2.5;
     }
+
+    update() {
+        this.x -= this.directionX;
+        this.y -= this.directionY;
+
+        if (this.x - this.size < 0 || this.x + this.size > canvas.width) {
+            this.directionX = -this.directionX;
+        }
+
+        if (this.y - this.size < - 0 || this.y + this.size > canvas.height) {
+            this.directionY = -this.directionY;
+        }
+    }
 }
