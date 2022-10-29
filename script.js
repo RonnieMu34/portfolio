@@ -8,7 +8,7 @@ let ParticlesArray = [];
 
 class Particle {
     constructor() {
-        this.size = Math.random() * 5 + 3;
+        this.size = Math.random() * 5;
         this.x = Math.random() * (canvas.width - 50) + (this.size + 10);
         this.y = Math.random() * (canvas.height - 50) + (this.size + 10);
         this.directionX = Math.random() * 5 - 2.5;
