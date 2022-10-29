@@ -13,22 +13,34 @@ html {
     height: 100%;
 }
 
+.hero {
+    display: flex;
+}
+
 .intro {
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    color: white;
+    align-items: center;
+    line-height: normal;   
+    margin-left: auto;
+    margin-right: auto;
+    color: #fafafa;
+    font-weight: 300;
+    z-index: 1;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 36px;
+    background-color: transparent;
 }
 
-#canvas {
-    width: 100%;
-    height: 100%;
+.line1, .line2 {
+    background-color: rgba(26,26,26,0);
 }
 
 .line1, .line2 {
@@ -37,4 +49,5 @@ html {
 
 .name {
     color: rgb(97, 240, 233);
+    background-color: rgba(26,26,26,0);
 }
