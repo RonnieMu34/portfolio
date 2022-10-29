@@ -36,7 +36,7 @@ class Particle {
 }
 
 const init = () => {
-    let noOfParticle = (canvas.width * canvas.height) / 3000;
+    let noOfParticle = (canvas.width * canvas.height) / 25000;
     for (let i = 0; i < noOfParticle; i++) {
         ParticlesArray.push(new Particle());
     }
