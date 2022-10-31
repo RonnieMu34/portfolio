@@ -36,6 +36,7 @@ class Particle {
 }
 
 const init = () => {
+    ParticlesArray = [];
     let noOfParticle = (canvas.width * canvas.height) / 25000;
     for (let i = 0; i < noOfParticle; i++) {
         ParticlesArray.push(new Particle());
@@ -71,4 +72,5 @@ animate();
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    init();
 });
