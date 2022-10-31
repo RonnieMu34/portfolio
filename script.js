@@ -102,3 +102,8 @@ window.addEventListener("resize", () => {
     canvas.height = window.innerHeight;
     init();
 });
+
+canvas.addEventListener("mousemove", (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+})
