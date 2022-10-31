@@ -49,6 +49,7 @@ html {
     height: 100vh;
     background-color: #1a1a1a;
     overflow: hidden;
+    opacity: 60%;
 }
 
 .line1, .line2 {
