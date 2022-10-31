@@ -51,6 +51,14 @@ const animate = () => {
             let dx = ParticlesArray[j].x - ParticlesArray[i].x;
             let dy = ParticlesArray[j].y - ParticlesArray[i].y;
             let distance = Math.sqrt((dx * dx) + (dy * dy));
+            if(distance  < 100) {
+                ctx.beginPath();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "#fff";
+                ctx.moveTo(ParticlesArray[j].x, ParticlesArray[j].y);
+                ctx.lineTo(ParticlesArray[i].x, ParticlesArray[i].y);
+                ctx.stroke();
+            }
         }
         ParticlesArray[i].update();
         ParticlesArray[i].draw();
