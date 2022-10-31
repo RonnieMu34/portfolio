@@ -9,7 +9,7 @@ let ParticlesArray = [];
 let mouse = {
     x: undefined,
     y: undefined,
-    radius: canvas.width * (10/100)
+    radius: canvas.width * (20/100)
 }
 
 class Particle {
@@ -38,11 +38,19 @@ class Particle {
         let distance = Math.sqrt((dx * dx) + (dy * dy));
 
         if (distance < (this.size + mouse.radius)) {
-            if (this.x < mouse.x && this.x > this.size +10) {
+            if (this.x < mouse.x && this.x > this.size + 10) {
                 this.x -= 10;
             }
 
             if (this.x > mouse.x && this.x < canvas.width - (this.size + 10)) {
+                this.x += 10;
+            }
+
+            if (this.y < mouse.y && this.y > this.size + 10) {
+                this.y -= 10;
+            }
+
+            if (this.y > mouse.y && this.y < canvas.height - (this.size + 10)) {
                 this.y += 10;
             }
         }
