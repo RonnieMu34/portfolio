@@ -32,6 +32,20 @@ class Particle {
         if (this.y - this.size < 0 || this.y + this.size > canvas.height) {
             this.directionY = -this.directionY;
         }
+
+        let dx = this.x - mouse.x;
+        let dy = this.y - mouse.y;
+        let distance = Math.sqrt((dx * dx) + (dy * dy));
+
+        if (distance < (this.size + mouse.radius)) {
+            if (this.x < mouse.x && this.x > this.size +10) {
+                this.x -= 10;
+            }
+
+            if (this.x > mouse.x && this.x < canvas.width - (this.size + 10)) {
+                this.y += 10;
+            }
+        }
     }
     draw() {
         ctx.beginPath();
