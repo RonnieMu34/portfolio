@@ -47,6 +47,11 @@ init();
 const animate = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < ParticlesArray.length; i++) {
+        for (let j = i; j < ParticlesArray.length; j++) {
+            let dx = ParticlesArray[j].x - ParticlesArray[i].x;
+            let dy = ParticlesArray[j].y - ParticlesArray[i].y;
+            let distance = Math.sqrt((dx * dx) + (dy * dy));
+        }
         ParticlesArray[i].update();
         ParticlesArray[i].draw();
     }
@@ -58,4 +63,4 @@ animate();
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-}); 
+});
