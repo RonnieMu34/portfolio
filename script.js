@@ -29,7 +29,7 @@ class Particle {
     }
     draw() {
         ctx.beginPath();
-        ctx.fillStyle = "#fff";
+        ctx.fillStyle = "#91fffa";
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
     }
@@ -55,7 +55,7 @@ const animate = () => {
             if(distance  < 100) {
                 ctx.beginPath();
                 ctx.lineWidth = 2;
-                ctx.strokeStyle = "#fff";
+                ctx.strokeStyle = "#91fffa";
                 ctx.moveTo(ParticlesArray[j].x, ParticlesArray[j].y);
                 ctx.lineTo(ParticlesArray[i].x, ParticlesArray[i].y);
                 ctx.stroke();
