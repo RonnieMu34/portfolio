@@ -50,6 +50,7 @@ html {
     background-color: #1a1a1a;
     overflow: hidden;
     opacity: 60%;
+    z-index: 2;
 }
 
 .line1, .line2 {
